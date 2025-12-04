@@ -1,94 +1,107 @@
-
-.futuristic-theme {
+/* =========================================
+   RESET & BASE STYLES
+========================================= */
+* {
   margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: url("../images/bck_grnd.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.futuristic-theme header {
-  background-color: rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 30px #ff00ff, 0 0 50px #00ffff;
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  padding-bottom: 50px;
+}
+
+/* =========================================
+   HEADER & NAVIGATION
+========================================= */
+header {
+  background-color: rgba(0,0,0,0.85);
+  box-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
+  padding: 20px 40px;
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(5px);
 }
 
-.futuristic-theme nav {
+header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
+  flex-wrap: wrap;
 }
 
-.futuristic-theme nav .logo {
+header nav .logo {
   font-size: 28px;
   font-weight: bold;
   color: #00ffff;
-  text-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
+  text-shadow: 0 0 15px #00ffff, 0 0 30px #ff00ff;
 }
 
-.futuristic-theme nav ul {
+header nav ul.nav-list {
   list-style: none;
   display: flex;
-  gap: 30px;
-  position: relative;
-  z-index: 2;
+  gap: 25px;
 }
 
-.futuristic-theme nav ul li {
+header nav ul.nav-list li {
   position: relative;
 }
 
-.futuristic-theme nav ul li a {
+header nav ul.nav-list li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  text-shadow: 0 0 5px #fff;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
 }
 
-.futuristic-theme nav ul li a:hover {
+header nav ul.nav-list li a:hover {
   color: #ff00ff;
-  text-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;
+  text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
 }
 
 /* Dropdown Menu */
-.futuristic-theme .dropdown-menu {
+header nav .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0,0,0,0.95);
   min-width: 180px;
-  box-shadow: 0 0 15px #00ffff, 0 0 30px #ff00ff;
+  padding: 12px 0;
   border-radius: 8px;
-  padding: 10px 0;
-  z-index: 3;
+  box-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
+  transition: 0.3s ease-in-out;
 }
 
-.futuristic-theme .dropdown:hover .dropdown-menu {
+header nav .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-.futuristic-theme .dropdown-menu li {
+header nav .dropdown-menu li {
   padding: 10px 20px;
 }
 
-.futuristic-theme .dropdown-menu li a {
+header nav .dropdown-menu li a {
   color: #00ffff;
   display: block;
 }
 
-.futuristic-theme .dropdown-menu li a:hover {
+header nav .dropdown-menu li a:hover {
   color: #ff00ff;
   text-shadow: 0 0 15px #ff00ff;
 }
 
-/* CTA BUTTON */
-.futuristic-theme .cta-button {
+/* =========================================
+   BUTTONS
+========================================= */
+.cta-button {
   background: linear-gradient(90deg, #ff00ff, #00ffff);
   color: #000;
   padding: 12px 25px;
@@ -98,342 +111,185 @@
   border-radius: 30px;
   box-shadow: 0 0 25px #00ffff, 0 0 40px #ff00ff;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+  text-align: center;
 }
 
-.futuristic-theme .cta-button:hover {
+.cta-button:hover {
   transform: scale(1.15);
   box-shadow: 0 0 40px #00ffff, 0 0 60px #ff00ff;
 }
 
-
-.futuristic-theme section.hero {
+/* =========================================
+   HERO / ABOUT US
+========================================= */
+.about-us {
+  padding: 100px 20px;
   text-align: center;
-  padding: 140px 20px;
-  background: url("../images/img1.jpg") no-repeat center center;
-  background-size: cover;
-  position: relative;
-  color: #fff;
 }
 
-.futuristic-theme section.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.65);
+.about-us h1 {
+  font-size: 54px;
+  text-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
+  margin-bottom: 50px;
 }
 
-.futuristic-theme .hero h1 {
-  font-size: 60px;
-  text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff, 0 0 60px #ff00ff;
-  position: relative;
-  z-index: 1;
+.about-us h2 {
+  font-size: 38px;
+  color: #00ffff;
+  text-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
+  margin-bottom: 30px;
 }
 
-.futuristic-theme .hero p {
-  font-size: 22px;
-  max-width: 750px;
-  margin: 20px auto 0 auto;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #ff00ff;
-  position: relative;
-  z-index: 1;
+.about-us p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 10px auto 20px auto;
 }
 
-.futuristic-theme .about-items {
+/* =========================================
+   GROUP MEMBERS BOX
+========================================= */
+.group-members-box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  flex-wrap: wrap;
-  margin: 60px 20px;
-}
-
-.futuristic-theme .about-items .item {
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 30px;
-  border-radius: 15px;
-  width: 260px;
-  box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.futuristic-theme .about-items .item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 40px #ff00ff, 0 0 60px #00ffff;
-}
-
-.futuristic-theme .about-items .item h3 {
-  text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
-}
-
-.futuristic-theme .about-items .item p {
-  color: #fff;
-  text-shadow: 0 0 5px #00ffff;
-}
-
-
-.futuristic-theme footer {
-  width: 100%;
-  background: linear-gradient(90deg, #ff00ff, #00ffff);
-  padding: 30px 0;
-  text-align: center;
-  font-size: 1rem;
-  color: #fff;
-  text-shadow: 0 0 10px #000;
-  box-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff;
-  clear: both;
-}
-/* Base Theme */
-.classic-theme {
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  font-family: 'Orbitron', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  box-sizing: border-box;
-}
-
-/* Headings */
-.classic-theme h1 {
-  color: #ff00ff; /* Neon Pink */
-  font-size: 52px;
-  text-align: center;
-  text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
-  margin-bottom: 20px;
-}
-
-.classic-theme h2 {
-  color: #00ffff; /* Neon Cyan */
-  font-size: 40px;
-  text-align: center;
-  text-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
-  margin: 30px 0 15px;
-}
-
-.classic-theme h3 {
-  color: #ff8000; /* Neon Orange */
-  font-size: 30px;
-  text-shadow: 0 0 10px #ff8000, 0 0 20px #ff8000;
-  margin-top: 20px;
-}
-
-.classic-theme h4 {
-  color: #00ff00; /* Neon Green */
-  font-size: 24px;
-  text-shadow: 0 0 8px #00ff00, 0 0 15px #00ff00;
-  margin-top: 15px;
-}
-
-/* Paragraphs */
-.classic-theme p {
-  color: #ffff66; /* Neon Yellow */
-  font-size: 20px;
-  line-height: 1.6;
-  text-align: left;
-  margin: 15px 0;
-}
-
-/* Lists */
-.classic-theme ul,
-.classic-theme ol {
-  font-size: 20px;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 20px auto;
-  padding-left: 40px;
-  text-align: left;
-}
-
-/* Different colored bullets/numbers */
-.classic-theme ul li {
-  color: #00ffff; /* Cyan bullets */
-  margin-bottom: 10px;
-}
-
-.classic-theme ol li {
-  color: #ff00ff; /* Pink numbers */
-  margin-bottom: 10px;
-}
-
-/* Links */
-.classic-theme ul li a,
-.classic-theme ol li a {
-  color: #ff8000; /* Orange links */
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.classic-theme ul li a:hover,
-.classic-theme ol li a:hover {
-  color: #00ff00; /* Green on hover */
-  text-shadow: 0 0 10px #00ff00;
-}
-
-/* Boxes */
-.classic-theme .box {
-  max-width: 800px;
-  border: 2px solid #ff00ff;
-  padding: 20px;
-  margin: 20px auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
-  box-shadow: 0 0 15px #ff00ff;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.classic-theme .box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #00ffff;
-}
-
-/* Aside */
-.classic-theme aside {
-  width: 25%;
-  min-width: 250px;
-  float: right;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  background: linear-gradient(145deg, rgba(0,0,0,0.8), rgba(10,10,40,0.7));
   border: 2px solid #00ffff;
-  padding: 20px;
-  margin: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  box-shadow: 0 0 15px #00ffff;
+  border-radius: 20px;
+  padding: 35px;
+  box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
 }
 
-@media (max-width: 1024px) {
-  .classic-theme aside {
-    float: none;
-    width: 90%;
-    margin: 20px auto;
-  }
+.about-figure {
+  flex: 0 0 260px;
+  margin-left: 30px;
 }
 
-/* Footer */
-.classic-theme footer {
+.about-figure img {
   width: 100%;
-  background: linear-gradient(90deg, #ff00ff, #00ffff);
-  padding: 15px 0;
-  text-align: center;
-  font-size: 1rem;
-  color: #000;
-  text-shadow: 0 0 10px #000;
-  box-shadow: 0 0 15px #ff00ff;
-  clear: both;
-  margin-top: 50px;
-}
-
-/* Call-to-Action Button */
-.classic-theme .cta-button {
-  background: linear-gradient(90deg, #ff00ff, #00ffff);
-  color: #000;
-  padding: 12px 25px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 30px;
-  box-shadow: 0 0 15px #00ffff;
+  border: 4px solid #00ffff;
+  border-radius: 12px;
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff;
   transition: transform 0.3s, box-shadow 0.3s;
-  display: inline-block;
-  text-align: center;
-  margin: 20px auto;
 }
 
-.classic-theme .cta-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px #ff00ff;
+.about-figure img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px #00ffff, 0 0 60px #ff00ff, 0 0 100px #00ffff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* BODY */
-body {
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #fff;
-  padding-bottom: 50px;
-}
-
-/* HEADER */
-header {
-  background-color: rgba(0,0,0,0.8);
-  box-shadow: 0 0 15px #ff00ff;
-  padding: 20px;
-  text-align: justify;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: justify;
-  padding: 15px 40px;
-}
-
-nav .logo {
-  font-size: 26px;
-  font-weight: bold;
+.about-figure figcaption {
+  margin-top: 12px;
   color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  z-index: 2;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 10px #ff00ff;
-}
-
-/* DROPDOWN */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(0,0,0,0.9);
-  min-width: 160px;
-  padding: 10px 0;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #00ffff;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* BUTTONS */
-.cta-button {
-  background: linear-gradient(90deg, #ff00ff, #00ffff);
-  color: #000;
-  padding: 10px 20px;
-  border: none;
+  text-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
   font-weight: bold;
-  border-radius: 30px;
+  text-align: center;
+}
+
+.members-info {
+  flex: 1;
+  text-align: left;
+}
+
+.member {
+  background-color: rgba(255, 0, 255, 0.12);
+  margin-bottom: 18px;
+  padding: 12px 18px;
+  border-left: 5px solid #ff00ff;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #ff00ff, 0 0 35px #00ffff;
+}
+
+.student-id {
+  float: right;
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
+}
+
+/* =========================================
+   LIST BOX (CONTRIBUTIONS / INFO)
+========================================= */
+.list-box {
+  display: block;
+  background-color: rgba(0,0,0,0.85);
+  border: 2px solid #00ffff;
+  border-radius: 15px;
+  padding: 28px 32px;
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff;
+  margin: 35px auto;
+  text-align: left;
+  max-width: 700px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.list-box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 35px #ff00ff, 0 0 60px #00ffff, 0 0 80px #ff00ff;
+}
+
+.list-box dt {
+  font-weight: bold;
+  margin-top: 18px;
+  color: #ff00ff;
+  text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
+}
+
+.list-box dd {
+  margin-left: 22px;
+  margin-bottom: 18px;
+  color: #00ffff;
+}
+
+/* =========================================
+   TABLES
+========================================= */
+.about-table {
+  margin: 45px auto;
+  width: 80%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.about-table caption {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
+  font-weight: bold;
+}
+
+.about-table th {
+  font-weight: bold;
+  padding: 14px;
+  background-color: #0f0f3f;
+  border: 1px solid #00ffff;
+}
+
+.about-table td {
+  padding: 14px;
+  background-color: #1a1a4d;
+  border: 1px solid #00ffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-table td:hover {
+  background-color: #2e2e7a;
+  box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
   cursor: pointer;
-  box-shadow: 0 0 15px #00ffff;
-  transition: transform 0.3s;
 }
 
-.cta-button:hover {
-  transform: scale(1.1);
-}
-
-/* FORM */
+/* =========================================
+   FORMS
+========================================= */
 form {
   width: 60%;
   margin: 40px auto;
@@ -444,21 +300,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-h1 {
-  text-align: center;
-  text-shadow: 0 0 10px #ff00ff;
-}
-
-h1::after {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 5px;
-  margin: 10px auto;
-  background: #00ffff;
-  box-shadow: 0 0 10px #00ffff;
 }
 
 label {
@@ -502,7 +343,6 @@ legend {
   text-shadow: 0 0 10px #00ffff;
 }
 
-/* BUTTON */
 button {
   padding: 12px;
   font-size: 16px;
@@ -521,300 +361,10 @@ button:hover {
   box-shadow: 0 0 20px #ff00ff;
 }
 
-/* INPUT HIGHLIGHT */
-#City {
-  border-color: #ff00ff;
-}
-
-.highlight {
-  background-color: #ff00ff44;
-  padding: 5px;
-  border-radius: 4px;
-}
-
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 footer,
-.site-footer {
-  text-align: center;
-  padding: 15px;
-  color: #fff;
-  background: rgba(0,0,0,0.8);
-  margin-top: 40px;
-  box-shadow: 0 0 15px #00ffff;
-}
-
-.site-footer p {
-  margin-top: 30px;
-  font-size: 16px;
-}
-
-/* ABOUT PAGE SECTIONS */
-.about-us {
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.about-us h1 {
-  font-size: 52px;
-  text-shadow: 0 0 20px fuchsia;
-  margin-bottom: 20px;
-}
-
-.about-us h2 {
-  font-size: 36px;
-  text-shadow: 0 0 15px aqua;
-  margin: 30px 0 15px 0;
-}
-
-.about-us p {
-  font-size: 20px;
-  max-width: 800px;
-  margin: 10px auto 20px auto;
-  text-align: center;
-}
-
-/* LIST BOXES */
-.company-overview .list-box,
-.list-box {
-  display: block;
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 2px solid aqua;
-  border-radius: 10px;
-  padding: 25px 30px;
-  box-shadow: 0 0 20px aqua;
-  margin: 20px auto;
-  text-align: left;
-  max-width: 500px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.list-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px fuchsia;
-}
-
-/* ===== FUTURISTIC THEME ===== */
-body.futuristic-scene {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #1a1a2e);
-  color: #fff;
-  min-height: 100vh;
-  scroll-behavior: smooth;
-}
-
-/* ===== HEADER & NAV ===== */
-header nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background-color: rgba(0, 0, 0, 0.85);
-  box-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
-  backdrop-filter: blur(5px);
-}
-
-header nav .logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff, 0 0 30px #ff00ff;
-}
-
-header nav ul.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-header nav ul.nav-list li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-}
-
-header nav ul.nav-list li a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
-}
-
-/* Dropdown Menu */
-header nav .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.95);
-  padding: 12px;
-  border-radius: 8px;
-  box-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
-  transition: 0.3s ease-in-out;
-}
-
-header nav .dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* ===== ABOUT US SECTION ===== */
-.about-us {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.about-us h1 {
-  font-size: 54px;
-  text-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
-  margin-bottom: 50px;
-}
-
-.about-us h2 {
-  font-size: 38px;
-  color: #00ffff;
-  text-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
-  margin-bottom: 30px;
-}
-
-/* ===== GROUP MEMBERS BOX ===== */
-.group-members-box {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  max-width: 900px;
-  margin: 0 auto 60px auto;
-  background: linear-gradient(145deg, rgba(0,0,0,0.8), rgba(10,10,40,0.7));
-  border: 2px solid #00ffff;
-  border-radius: 20px;
-  padding: 35px;
-  box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
-}
-
-/* Floating Group Photo */
-.about-figure {
-  flex: 0 0 260px;
-  float: right;
-  margin-left: 30px;
-}
-
-.about-figure img {
-  width: 100%;
-  border: 4px solid #00ffff;
-  border-radius: 12px;
-  box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.about-figure img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 35px #00ffff, 0 0 60px #ff00ff, 0 0 100px #00ffff;
-}
-
-.about-figure figcaption {
-  margin-top: 12px;
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Members Info */
-.members-info {
-  flex: 1;
-  text-align: left;
-}
-
-.member {
-  background-color: rgba(255, 0, 255, 0.12);
-  margin-bottom: 18px;
-  padding: 12px 18px;
-  border-left: 5px solid #ff00ff;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.member:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px #ff00ff, 0 0 35px #00ffff;
-}
-
-/* Student IDs right aligned */
-.student-id {
-  float: right;
-  color: #00ffff;
-  font-weight: bold;
-  text-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
-}
-
-/* ===== MEMBER CONTRIBUTIONS (DL) ===== */
-.list-box {
-  display: block;
-  background-color: rgba(0, 0, 0, 0.85);
-  border: 2px solid #00ffff;
-  border-radius: 15px;
-  padding: 28px 32px;
-  box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff;
-  margin: 35px auto;
-  text-align: left;
-  max-width: 700px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.list-box:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 35px #ff00ff, 0 0 60px #00ffff, 0 0 80px #ff00ff;
-}
-
-.list-box dt {
-  font-weight: bold;
-  margin-top: 18px;
-  color: #ff00ff;
-  text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
-}
-
-.list-box dd {
-  margin-left: 22px;
-  margin-bottom: 18px;
-  color: #00ffff;
-}
-
-/* ===== INTERESTS TABLE ===== */
-.about-table {
-  margin: 45px auto;
-  width: 80%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-.about-table caption {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
-  font-weight: bold;
-}
-
-.about-table th {
-  font-weight: bold;
-  padding: 14px;
-  background-color: #0f0f3f;
-  border: 1px solid #00ffff;
-}
-
-.about-table td {
-  padding: 14px;
-  background-color: #1a1a4d;
-  border: 1px solid #00ffff;
-  transition: all 0.3s ease-in-out;
-}
-
-.about-table td:hover {
-  background-color: #2e2e7a;
-  box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
-  cursor: pointer;
-}
-
-/* ===== FOOTER ===== */
 .site-footer {
   width: 100%;
   background: linear-gradient(90deg, #ff00ff, #00ffff);
@@ -827,7 +377,9 @@ header nav .dropdown:hover .dropdown-menu {
   clear: both;
 }
 
-/* ===== RESPONSIVE ===== */
+/* =========================================
+   RESPONSIVE
+========================================= */
 @media (max-width: 768px) {
   header nav {
     flex-direction: column;
@@ -857,6 +409,8 @@ header nav .dropdown:hover .dropdown-menu {
   .about-table {
     width: 95%;
   }
+
+  form {
+    width: 90%;
+  }
 }
-
-
