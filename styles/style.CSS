@@ -1,70 +1,3 @@
-<<<<<<< HEAD
-h1 {color:  #800020;
-font-size: 60px;   
-font:small-caps bold 40px/1.5 "Arial", sans-serif;
-text-align: center;
-margin-bottom: 10px;
-}
-h2 {color: darkolivegreen ;
-font-size: 36px;
-text-align: center;
-}
-
-h3 {color:  #A07800;
-font-size: 30px;
-text-align: left;
-}
-h4 {color:  #D4A017;
-font-size: 24px;    
-text-align: left;
-}
-p  {color:  #4B3621;
-font-size: 20px;
-text-align: justify;
-}
-
-body {background-color:  #CBBDA3;
-}
-ol  {color:  #4B3621;
-font-size: 20px;    
-text-align: justify;
-}
-ul  {color:  #4B3621;
-font-size: 20px;
-text-align: justify;
-}
-.box {
-  border: 2px solid #A07800;
-  padding: 15px;
-  margin-bottom: 20px;
-  background-color: #F5F5DC;
-}
-.box {
-    width: 30%;
-    border: 3px solid #A07800;   /* dark olive green */
-    padding: 15px;
-    margin: 15px auto;
-    background-color: #f6f6f3;   /* optional light background */
-    box-sizing: border-box;
-}
-aside {
-    width: 25%;
-    float: right;
-    border: 3px solid #556B2F;   
-    padding: 15px;
-    margin: 15px;
-    background-color: #f6f6f3;   
-    box-sizing: border-box;
-}
-footer {
-    width: 100%;
-    background-color: #556B2F;   
-    padding: 10px 0;
-    text-align: center;         
-    font-size: 0.8rem;           /* small text */
-    color: white; 
-    clear: both;                 
-=======
 .futuristic-theme {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
@@ -192,18 +125,34 @@ footer {
   transition: 0.3s;
 }
 
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Job Listings main heading */
+.classic-theme header h1 {
+  color: #ff0095;
+  font-size: 70px; /* Bigger than previous 52px */
+  text-align: center;
+  text-shadow: 0 0 25px #ff0080, 0 0 50px #00ff00; /* extra neon glow */
+  margin-bottom: 30px;
+}
+
 .classic-theme {
   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
   color: #fff;
   font-family: 'Orbitron', sans-serif;
   margin: 0;
+  padding: 0 20px;
+  text-align: center; /* Center all content by default */
 }
 
 /* Headings */
 .classic-theme h1 {
   color: #ff00ff;
   font-size: 52px;
-  text-align: center;
   text-shadow: 0 0 20px #ff00ff;
   margin-bottom: 20px;
 }
@@ -211,41 +160,56 @@ footer {
 .classic-theme h2 {
   color: #00ffff;
   font-size: 40px;
-  text-align: center;
   text-shadow: 0 0 15px #00ffff;
+  margin: 20px 0;
 }
 
 .classic-theme h3 {
   color: #ff00ff;
   font-size: 30px;
   text-shadow: 0 0 10px #ff00ff;
+  margin: 15px 0;
 }
 
 .classic-theme h4 {
   color: #00ffff;
   font-size: 24px;
   text-shadow: 0 0 8px #00ffff;
+  margin: 10px 0;
 }
 
-/* Text elements */
-.classic-theme p,
-.classic-theme ol,
-.classic-theme ul {
-  color: #ffffff;
+/* Paragraphs and text content */
+.classic-theme p {
   font-size: 20px;
-  text-align: justify;
+  color: #ffffff;
+  margin: 10px auto;
 }
 
+/* Centering lists */
+.classic-theme ul,
+.classic-theme ol {
+  list-style-position: inside;
+  display: inline-block; /* allows centering */
+  text-align: left; /* keeps bullets/numbers aligned naturally */
+  margin: 10px auto;
+  font-size: 20px;
+  padding-left: 20px;
+}
 
+.classic-theme ul li,
+.classic-theme ol li {
+  margin: 8px 0;
+}
+
+/* Boxes */
 .classic-theme .box {
-  width: 30%;
+  width: 50%; /* wider for readability */
   border: 2px solid #ff00ff;
   padding: 20px;
   margin: 20px auto;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   box-shadow: 0 0 15px #ff00ff;
-  box-sizing: border-box;
   transition: transform 0.3s;
 }
 
@@ -253,20 +217,20 @@ footer {
   transform: scale(1.05);
 }
 
-
+/* Aside (sidebar) */
 .classic-theme aside {
-  width: 25%;
-  float: right;
+  width: 50%;
+  margin: 20px auto;
   border: 2px solid #00ffff;
   padding: 20px;
-  margin: 20px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 10px;
   box-shadow: 0 0 15px #00ffff;
-  box-sizing: border-box;
+  clear: both;
+  text-align: left; /* keep content inside aside left-aligned */
 }
 
-
+/* Footer */
 .classic-theme footer {
   width: 100%;
   background: linear-gradient(90deg, #ff00ff, #00ffff);
@@ -278,7 +242,6 @@ footer {
   box-shadow: 0 0 15px #ff00ff;
   clear: both;
 }
-
 .classic-theme .cta-button {
   background: linear-gradient(90deg, #ff00ff, #00ffff);
   color: #000;
@@ -287,25 +250,386 @@ footer {
   font-weight: bold;
   cursor: pointer;
   border-radius: 30px;
-  box-shadow: 0 0 15px #00ffff;
-  transition: transform 0.3s;
 }
 
-.classic-theme .cta-button:hover {
-  transform: scale(1.1);
+body.futuristic-theme {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffff;
+  line-height: 1.6;
 }
 
+/* Header and Navigation */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px #ff00ff;
+}
 
-.classic-theme ul li a,
-.classic-theme ol li a {
-  color: #00ffff;
+header nav .logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: aqua;
+  text-shadow: 0 0 10px aqua;
+}
+
+header nav ul.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+header nav ul.nav-list li a {
+  color: #fff;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.classic-theme ul li a:hover,
-.classic-theme ol li a:hover {
+header nav ul.nav-list li a:hover {
+  color: fuchsia;
+  text-shadow: 0 0 10px fuchsia;
+}
+
+/* CTA Button */
+.cta-button {
+  background: linear-gradient(90deg, fuchsia, aqua);
+  color: #000;
+  padding: 12px 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 0 15px aqua;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px fuchsia;
+}
+
+/* Main About Section */
+.about-us {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-us h1 {
+  font-size: 52px;
+  text-shadow: 0 0 20px fuchsia;
+  margin-bottom: 20px;
+}
+
+.about-us h2 {
+  font-size: 36px;
+  text-shadow: 0 0 15px aqua;
+  margin: 30px 0 15px 0;
+}
+
+.about-us p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 10px auto 20px auto;
+  text-align: center;
+}
+
+.site-footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 40px 20px;
+  margin-top: auto;
+  text-align: center;
+}
+
+.company-overview h2,
+.company-overview h3 {
+  text-shadow: 0 0 15px aqua;
+  margin-bottom: 20px;
+}
+
+.company-overview .list-box {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 2px solid aqua;
+  border-radius: 10px;
+  padding: 25px 30px;
+  box-shadow: 0 0 20px aqua;
+  margin: 20px auto;
+  text-align: left;
+  max-width: 500px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.company-overview .list-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px fuchsia;
+}
+
+.company-overview .list-box ul,
+.company-overview .list-box dl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.company-overview .list-box ul li {
+  margin: 8px 0;
+}
+
+.company-overview .list-box dl dt {
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.company-overview .list-box dl dd {
+  margin-left: 15px;
+  margin-bottom: 12px;
+}
+
+/* Footer links */
+.company-overview a.footer-link {
+  color: aqua;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.company-overview a.footer-link:hover {
+  color: fuchsia;
+  text-shadow: 0 0 10px fuchsia;
+}
+
+/* Footer copyright */
+.site-footer p {
+  margin-top: 30px;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header nav ul.nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about-us h1 {
+    font-size: 42px;
+  }
+
+  .about-us h2 {
+    font-size: 28px;
+  }
+
+  .company-overview .list-box {
+    width: 90%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+
+header {
+  background-color: rgba(0,0,0,0.8);
+  box-shadow: 0 0 15px #ff00ff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+nav .logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  z-index: 2;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
   color: #ff00ff;
   text-shadow: 0 0 10px #ff00ff;
->>>>>>> 4893e346e9bf2e388a8efaa4809a43cdda56a84e
+}
+
+.dropdown-menu { 
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  min-width: 160px;
+  padding: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00ffff;
+  transition: transform 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+}
+
+
+form {
+  width: 60%;
+  margin: 40px auto;
+  background: rgba(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ff00ff;
+  display: flex;
+  flex-direction: column;   
+  gap: 20px;
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #00ffff;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  box-shadow: 0 0 10px #00ffff50;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #ff00ff;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+
+fieldset {
+  border: 1px solid #00ffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffff50;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00ffff;
+  transition: 0.3s;
+}
+
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00ff;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  margin: 10px auto;
+  background: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+
+#City {
+  border-color: #ff00ff; 
+}
+
+
+.highlight {
+  background-color: #ff00ff44;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #fff;
+  background: rgba(0,0,0,0.8);
+  margin-top: 40px;
+  box-shadow: 0 0 15px #00ffff;
 }
