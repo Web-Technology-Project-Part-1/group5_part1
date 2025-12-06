@@ -193,15 +193,14 @@ our gaming website is has a modern and electric feel with purple and neon tones*
    ================== */
    /*  ITS A BASIC STYLES FOR A CLEAN, PROFESSIONAL 
    LOOK AND IS COOL TONED AND EDGY WITH A NEON POP */
-body.classic-theme {
+bbody.classic-theme {
     margin: 0;
     padding: 0;
     font-family: 'Orbitron', sans-serif;
-
 }
 
-
-.nav-bar {
+/* NAV BAR */
+.classic-theme .nav-bar {
     width: 100%;
     padding: 15px 0;
     background: rgba(10, 0, 20, 0.7);
@@ -212,33 +211,33 @@ body.classic-theme {
     align-items: center;
 }
 
-.logo {
+.classic-theme .logo {
     font-size: 22px;
     color: #b000ff;
     text-shadow: 0 0 10px #b000ff, 0 0 20px #ff00ea;
     margin-left: 20px;
 }
 
-.nav-list {
+.classic-theme .nav-list {
     list-style: none;
     display: flex;
     gap: 25px;
     margin-right: 20px;
 }
 
-.nav-list a {
+.classic-theme .nav-list a {
     text-decoration: none;
     color: #e4d9ff;
     transition: 0.3s;
 }
 
-.nav-list a:hover {
+.classic-theme .nav-list a:hover {
     color: #00d5ff;
     text-shadow: 0 0 10px #00d5ff;
 }
 
-/* FONT SIZE SIMULATES NICELY WITH THE WEB */
-header h1 {
+/* HEADERS */
+.classic-theme header h1 {
     font: small-caps 48px 'Orbitron', sans-serif;
     color: #fff;
     text-align: center;
@@ -246,21 +245,21 @@ header h1 {
     text-shadow: 0 0 15px #b000ff, 0 0 30px #00d5ff;
 }
 
-header p {
+.classic-theme header p {
     text-align: center;
     font-size: 16px;
     opacity: 0.8;
 }
 
-
-main {
+/* MAIN CONTENT */
+.classic-theme main {
     width: 75%;
     float: left;
     padding: 20px 40px;
 }
-/* JOB LISTINGS WITH A NEON BORDER AND DIFFERENT 
-SHADES OF PURPLES USED TO ENSURE VARIETY*/
-.job-listing {
+
+/* JOB LISTINGS */
+.classic-theme .job-listing {
     background: rgba(20, 0, 40, 0.75);
     border: 1px solid #b000ff;
     padding: 20px;
@@ -269,18 +268,18 @@ SHADES OF PURPLES USED TO ENSURE VARIETY*/
     box-shadow: 0 0 15px #b000ff;
 }
 
-.job-listing h2 {
+.classic-theme .job-listing h2 {
     color: #b000ff;
     text-shadow: 0 0 12px #b000ff;
 }
 
-.job-listing h3 {
+.classic-theme .job-listing h3 {
     color: #ff00ea;
     text-shadow: 0 0 8px #ff00ea;
 }
-/* BOX ELEMENTS WITH A SLIGHTLY DIFFERENT BACKGROUND
-TO MAKE THEM STAND OUT */
-.box {
+
+/* BOX */
+.classic-theme .box {
     background: rgba(10, 0, 30, 0.6);
     border-left: 4px solid #ff00ea;
     padding: 15px;
@@ -288,62 +287,55 @@ TO MAKE THEM STAND OUT */
     box-shadow: 0 0 10px #ff00ea;
 }
 
-
-/* SIDEBAR STYLED TO MATCH THE THEME WITH A COLOURED BORDER */
-
-aside {
-    width: 25%;           /* RULE */
-    float: right;         /* RULE */
-    padding: 20px;        /* RULE */
-    margin: 20px;         /* RULE */
-
+/* SIDEBAR */
+.classic-theme aside {
+    width: 25%;
+    float: right;
+    padding: 20px;
+    margin: 20px;
     background: rgba(20, 0, 40, 0.75);
-    border: 2px solid #ff00ea; /* RULE: neon pink border */
+    border: 2px solid #ff00ea;
     border-radius: 10px;
     box-shadow: 0 0 15px #ff00ea;
 }
-/* SIDEBAR HEADINGS WITH A GLOW EFFECT */
-aside h3 {
+
+.classic-theme aside h3 {
     text-shadow: 0 0 10px #ff00ea;
 }
-/* FOOTER STYLED TO MATCH THE THEME WITH FULL WIDTH AND CENTERED TEXT */
 
-footer {
+/* FOOTER */
+.classic-theme footer {
     clear: both;
-    width: 100%;    /* RULE */
+    width: 100%;
     padding: 15px 0;
     background: rgba(10, 0, 20, 0.8);
     border-top: 2px solid #b000ff;
     box-shadow: 0 0 20px #b000ff;
     margin-top: 40px;
-    text-align: center;  /* RULE */
+    text-align: center;
 }
 
-footer p {
-    font-size: 12px;     /* RULE: small font */
+.classic-theme footer p {
+    font-size: 12px;
     opacity: 0.8;
     color: #e4d9ff;
 }
+/*ADAPTIVE STYLES */
 
-/* ADAPTIVE STYLES ENSURING RESPONSIVENESS */
 
 @media (max-width: 900px) {
-    aside {
+    .modern aside,
+    .modern main {
         width: 90%;
         float: none;
         margin: 20px auto;
     }
-
-    main {
-        width: 90%;
-        float: none;
-        margin: auto;
-    }
 }
 
-
-/* THE ABOUT PAGE STYLES */
-nav {
+/* ============================
+   NAVIGATION BAR
+============================ */
+.modern nav {
     background: rgba(10, 0, 25, 0.85);
     padding: 15px 40px;
     display: flex;
@@ -352,31 +344,31 @@ nav {
     border-bottom: 2px solid #a020f0;
 }
 
-.logo {
+.modern .logo {
     font-size: 1.6rem;
     color: #d78dff;
     font-weight: bold;
     letter-spacing: 1px;
 }
 
-.nav-list {
+.modern .nav-list {
     list-style: none;
     display: flex;
     gap: 25px;
 }
 
-.nav-list a {
+.modern .nav-list a {
     color: #e9d5ff;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.nav-list a:hover {
+.modern .nav-list a:hover {
     color: #a020f0;
 }
 
 /* Dropdown */
-.dropdown-menu {
+.modern .dropdown-menu {
     display: none;
     position: absolute;
     background-color: rgba(25, 0, 45, 0.95);
@@ -385,22 +377,22 @@ nav {
     border-radius: 6px;
 }
 
-.dropdown:hover .dropdown-menu {
+.modern .dropdown:hover .dropdown-menu {
     display: block;
 }
 
-.dropdown-menu li {
+.modern .dropdown-menu li {
     padding: 5px 0;
 }
 
-.dropdown-menu a:hover {
+.modern .dropdown-menu a:hover {
     color: #d78dff;
 }
 
-/* About Us Section */
-
-
-.about-us {
+/* ============================
+   ABOUT SECTION
+============================ */
+.modern .about-us {
     padding: 60px 90px;
     background: rgba(15, 0, 35, 0.75);
     backdrop-filter: blur(4px);
@@ -411,51 +403,46 @@ nav {
     border-radius: 10px;
 }
 
-.about-us h1 {
+.modern .about-us h1 {
     font: small-caps bold 2.6rem "Orbitron", sans-serif;
     text-align: center;
     margin-bottom: 40px;
     color: #d78dff;
 }
 
-
-
-.about-figure {
-    float: right;      
+.modern .about-figure {
+    float: right;
     width: 280px;
     margin-left: 25px;
     margin-bottom: 25px;
     text-align: center;
 }
 
-.about-figure img {
+.modern .about-figure img {
     width: 100%;
-    border: 4px solid #a020f0;  /* REQUIRED shorthand border */
+    border: 4px solid #a020f0;
     border-radius: 10px;
 }
 
-.about-figure figcaption {
+.modern .about-figure figcaption {
     color: #d6b6ff;
     margin-top: 10px;
     font-size: 0.9rem;
 }
 
-
-/* Student ID styled to stand out */
-
-.student-id {
-    float: right;               
+.modern .student-id {
+    float: right;
     color: #b77dff;
     font-weight: bold;
     margin-left: 10px;
     text-shadow: 0 0 6px #a020f0;
 }
 
-
-
-/* Group Members Box and List Box with consistent styling */
-.group-members-box,
-.list-box {
+/* ============================
+   BOX SECTIONS
+============================ */
+.modern .group-members-box,
+.modern .list-box {
     background: rgba(35, 0, 55, 0.55);
     padding: 25px;
     border: 2px solid #a020f0;
@@ -463,63 +450,61 @@ nav {
     margin-top: 30px;
 }
 
-.group-members-box h2,
-.list-box h2 {
+.modern .group-members-box h2,
+.modern .list-box h2 {
     color: #d78dff;
 }
-/* About Table with specified styles */
 
-
-
-.about-table {
+/* ============================
+   ABOUT TABLE
+============================ */
+.modern .about-table {
     width: 60%;
-    margin: 0 auto;             /* REQUIRED center table */
+    margin: 0 auto;
     border-collapse: collapse;
     text-align: center;
     font-size: 1.1rem;
 }
 
-.about-table caption {
+.modern .about-table caption {
     margin-bottom: 10px;
     font-weight: bold;
     color: #e3d7ff;
 }
 
-/* Table headings bold (REQUIRED) */
-.about-table th {
+.modern .about-table th {
     font-weight: bold;
     padding: 12px;
-    background-color: #3b005a;   /* hex color REQUIRED */
+    background-color: #3b005a;
     border: 1px solid #a020f0;
 }
 
-/* Table cells with hex background color */
-.about-table td {
-    background-color: #1a0029;   /* REQUIRED hex value */
+.modern .about-table td {
+    background-color: #1a0029;
     padding: 12px;
     border: 1px solid #6a0080;
     transition: 0.3s;
 }
 
-/* Hover effect */
-.about-table td:hover {
+.modern .about-table td:hover {
     background-color: #4c007c;
     cursor: pointer;
 }
 
-
-
-.site-footer {
-    width: 100%;                      /* REQUIRED full width */
-    text-align: center;               /* REQUIRED */
-    font-size: 0.8rem;                /* REQUIRED small text */
+/* ============================
+   FOOTER
+============================ */
+.modern .site-footer {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
     padding: 20px;
     margin-top: 50px;
     background: rgba(12, 0, 25, 0.9);
     border-top: 2px solid #a020f0;
     color: #d8caff;
 }
-/* ANOTHER SIMILAR AND CONSISTANT THEMED PAGE */
+
 
 .theme-futuristic * {
     box-sizing: border-box;
