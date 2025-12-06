@@ -1,416 +1,678 @@
-/* =========================================
-   RESET & BASE STYLES
-========================================= */
-* {
+
+
+/* NEON COLOR VARIABLES */
+:root {
+  --neon-purple: #b000ff;
+  --neon-pink: #ff00ea;
+  --neon-blue: #00d5ff;
+  --panel-bg: rgba(20, 0, 40, 0.75);
+  --dark-overlay: rgba(10, 0, 20, 0.85);
+  --text-light: #e4d9ff;
+  --font-main: 'Orbitron', sans-serif;
+}
+
+/* 🌌 GLOBAL THEME WRAPPER */
+.nova-theme {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: var(--font-main);
+  color: var(--text-light);
+
+  /* Space Background (replace URL when needed) */
+  background: 
+    url("../images/bck_grnd.jpg") 
+    no-repeat center center fixed;
+  background-size: cover;
+
+  /* Purple dark blend for neon contrast */
+  background-color: var(--dark-overlay);
+  background-blend-mode: overlay;
+
+  overflow-x: hidden;
 }
 
-body {
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #fff;
-  line-height: 1.6;
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  padding-bottom: 50px;
+/* ⭐ GLOBAL TEXT GLOW */
+.nova-theme h1,
+.nova-theme h2,
+.nova-theme h3 {
+  text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-blue);
 }
 
-/* =========================================
-   HEADER & NAVIGATION
-========================================= */
-header {
-  background-color: rgba(0,0,0,0.85);
-  box-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
-  padding: 20px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(5px);
+
+.nova-theme header {
+  background: rgba(10, 0, 20, 0.7);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid var(--neon-purple);
+  box-shadow: 0 0 20px var(--neon-purple);
+  padding: 15px 0;
 }
 
-header nav {
+.nova-theme nav {
+  width: 90%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-header nav .logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff, 0 0 30px #ff00ff;
+.nova-theme .logo {
+  color: var(--neon-purple);
+  font-weight: 700;
+  font-size: 22px;
+  text-shadow: 0 0 15px var(--neon-purple), 0 0 30px var(--neon-pink);
 }
 
-header nav ul.nav-list {
+
+.nova-theme .nav-list {
   list-style: none;
   display: flex;
   gap: 25px;
 }
 
-header nav ul.nav-list li {
-  position: relative;
-}
-
-header nav ul.nav-list li a {
-  color: #fff;
+.nova-theme .nav-list a {
+  color: var(--text-light);
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
-}
-
-header nav ul.nav-list li a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
-}
-
-/* Dropdown Menu */
-header nav .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(0,0,0,0.95);
-  min-width: 180px;
-  padding: 12px 0;
-  border-radius: 8px;
-  box-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
-  transition: 0.3s ease-in-out;
-}
-
-header nav .dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-header nav .dropdown-menu li {
-  padding: 10px 20px;
-}
-
-header nav .dropdown-menu li a {
-  color: #00ffff;
-  display: block;
-}
-
-header nav .dropdown-menu li a:hover {
-  color: #ff00ff;
-  text-shadow: 0 0 15px #ff00ff;
-}
-
-/* =========================================
-   BUTTONS
-========================================= */
-.cta-button {
-  background: linear-gradient(90deg, #ff00ff, #00ffff);
-  color: #000;
-  padding: 12px 25px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 30px;
-  box-shadow: 0 0 25px #00ffff, 0 0 40px #ff00ff;
-  transition: transform 0.3s, box-shadow 0.3s;
-  display: inline-block;
-  text-align: center;
-}
-
-.cta-button:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 40px #00ffff, 0 0 60px #ff00ff;
-}
-
-/* =========================================
-   HERO / ABOUT US
-========================================= */
-.about-us {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.about-us h1 {
-  font-size: 54px;
-  text-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
-  margin-bottom: 50px;
-}
-
-.about-us h2 {
-  font-size: 38px;
-  color: #00ffff;
-  text-shadow: 0 0 20px #00ffff, 0 0 40px #ff00ff;
-  margin-bottom: 30px;
-}
-
-.about-us p {
-  font-size: 20px;
-  max-width: 800px;
-  margin: 10px auto 20px auto;
-}
-
-/* =========================================
-   GROUP MEMBERS BOX
-========================================= */
-.group-members-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 50px;
-  max-width: 900px;
-  margin: 0 auto 60px auto;
-  background: linear-gradient(145deg, rgba(0,0,0,0.8), rgba(10,10,40,0.7));
-  border: 2px solid #00ffff;
-  border-radius: 20px;
-  padding: 35px;
-  box-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff;
-}
-
-.about-figure {
-  flex: 0 0 260px;
-  margin-left: 30px;
-}
-
-.about-figure img {
-  width: 100%;
-  border: 4px solid #00ffff;
-  border-radius: 12px;
-  box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.about-figure img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 35px #00ffff, 0 0 60px #ff00ff, 0 0 100px #00ffff;
-}
-
-.about-figure figcaption {
-  margin-top: 12px;
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
-  font-weight: bold;
-  text-align: center;
-}
-
-.members-info {
-  flex: 1;
-  text-align: left;
-}
-
-.member {
-  background-color: rgba(255, 0, 255, 0.12);
-  margin-bottom: 18px;
-  padding: 12px 18px;
-  border-left: 5px solid #ff00ff;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.member:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px #ff00ff, 0 0 35px #00ffff;
-}
-
-.student-id {
-  float: right;
-  color: #00ffff;
-  font-weight: bold;
-  text-shadow: 0 0 15px #00ffff, 0 0 25px #ff00ff;
-}
-
-/* =========================================
-   LIST BOX (CONTRIBUTIONS / INFO)
-========================================= */
-.list-box {
-  display: block;
-  background-color: rgba(0,0,0,0.85);
-  border: 2px solid #00ffff;
-  border-radius: 15px;
-  padding: 28px 32px;
-  box-shadow: 0 0 25px #00ffff, 0 0 50px #ff00ff;
-  margin: 35px auto;
-  text-align: left;
-  max-width: 700px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.list-box:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 35px #ff00ff, 0 0 60px #00ffff, 0 0 80px #ff00ff;
-}
-
-.list-box dt {
-  font-weight: bold;
-  margin-top: 18px;
-  color: #ff00ff;
-  text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
-}
-
-.list-box dd {
-  margin-left: 22px;
-  margin-bottom: 18px;
-  color: #00ffff;
-}
-
-/* =========================================
-   TABLES
-========================================= */
-.about-table {
-  margin: 45px auto;
-  width: 80%;
-  border-collapse: collapse;
-  text-align: center;
-}
-
-.about-table caption {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
-  font-weight: bold;
-}
-
-.about-table th {
-  font-weight: bold;
-  padding: 14px;
-  background-color: #0f0f3f;
-  border: 1px solid #00ffff;
-}
-
-.about-table td {
-  padding: 14px;
-  background-color: #1a1a4d;
-  border: 1px solid #00ffff;
-  transition: all 0.3s ease-in-out;
-}
-
-.about-table td:hover {
-  background-color: #2e2e7a;
-  box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
-  cursor: pointer;
-}
-
-/* =========================================
-   FORMS
-========================================= */
-form {
-  width: 60%;
-  margin: 40px auto;
-  background: rgba(0,0,0,0.7);
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #ff00ff;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #00ffff;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  border-radius: 6px;
-  font-size: 14px;
-  box-shadow: 0 0 10px #00ffff50;
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: #ff00ff;
-  box-shadow: 0 0 10px #ff00ff;
-}
-
-fieldset {
-  border: 1px solid #00ffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #00ffff50;
-}
-
-legend {
-  padding: 0 10px;
-  font-weight: bold;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
-}
-
-button {
-  padding: 12px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  background: linear-gradient(90deg, #00ffff, #ff00ff);
-  color: black;
-  font-weight: bold;
-  box-shadow: 0 0 15px #00ffff;
   transition: 0.3s;
 }
 
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #ff00ff;
+.nova-theme .nav-list a:hover {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
 }
 
-/* =========================================
-   FOOTER
-========================================= */
-footer,
-.site-footer {
-  width: 100%;
-  background: linear-gradient(90deg, #ff00ff, #00ffff);
-  padding: 35px 0;
-  text-align: center;
-  font-size: 1rem;
+.nova-theme .dropdown {
+  position: relative;
+}
+
+.nova-theme .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 35px;
+  background: var(--panel-bg);
+  list-style: none;
+  padding: 10px 0;
+  border: 1px solid var(--neon-purple);
+  box-shadow: 0 0 15px var(--neon-purple);
+}
+
+.nova-theme .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+.nova-theme .cta-button {
+  padding: 8px 20px;
+  background: transparent;
+  border: 1px solid var(--neon-purple);
+  color: var(--neon-purple);
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 4px;
+  text-shadow: 0 0 10px var(--neon-purple);
+}
+
+.nova-theme .cta-button:hover {
+  background: var(--neon-purple);
   color: #fff;
-  text-shadow: 0 0 15px #000;
-  box-shadow: 0 0 25px #ff00ff, 0 0 40px #00ffff;
-  clear: both;
+  box-shadow: 0 0 20px var(--neon-purple), 0 0 40px var(--neon-purple);
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+
+.nova-theme .hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  background: radial-gradient(circle at center,
+    rgba(120, 0, 200, 0.35),
+    rgba(10, 0, 20, 0.8)
+  );
+
+  color: #fff;
+}
+
+
+.nova-theme .panel,
+.nova-theme .item,
+.nova-theme .content-box {
+  background: var(--panel-bg);
+  border: 1px solid var(--neon-purple);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--neon-purple);
+  transition: 0.3s ease;
+}
+
+.nova-theme .panel:hover,
+.nova-theme .item:hover,
+.nova-theme .content-box:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 20px var(--neon-pink),
+    0 0 40px var(--neon-blue);
+}
+
+/* ICONS */
+.nova-theme .icon {
+  font-size: 40px;
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+
+.nova-theme footer {
+  text-align: center;
+  padding: 25px;
+  background: rgba(10, 0, 20, 0.7);
+  border-top: 2px solid var(--neon-purple);
+  box-shadow: 0 0 15px var(--neon-purple);
+}
+
+.nova-theme footer a {
+  color: var(--neon-blue);
+  text-decoration: none;
+}
+
+.nova-theme footer a:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 8px var(--neon-pink);
+}
+
 @media (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-    gap: 15px;
+  .nova-theme .nav-list {
+    display: none;
   }
+}
 
-  header nav ul.nav-list {
-    flex-direction: column;
-    gap: 10px;
-  }
+body.classic-theme {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
 
-  .group-members-box {
-    flex-direction: column;
+   
+    background: url("YOUR-SPACE-IMAGE-LINK-HERE") no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(10, 0, 20, 0.85);
+    background-blend-mode: overlay;
+
+    color: #e4d9ff;
+}
+
+
+.nav-bar {
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(10, 0, 20, 0.7);
+    border-bottom: 2px solid #b000ff;
+    box-shadow: 0 0 20px #b000ff;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-  }
+}
 
-  .members-info {
+.logo {
+    font-size: 22px;
+    color: #b000ff;
+    text-shadow: 0 0 10px #b000ff, 0 0 20px #ff00ea;
+    margin-left: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-right: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #e4d9ff;
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    color: #00d5ff;
+    text-shadow: 0 0 10px #00d5ff;
+}
+
+
+header h1 {
+    font: small-caps 48px 'Orbitron', sans-serif;
+    color: #fff;
     text-align: center;
-  }
+    margin-top: 40px;
+    text-shadow: 0 0 15px #b000ff, 0 0 30px #00d5ff;
+}
 
-  .student-id {
-    float: none;
+header p {
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+
+main {
+    width: 75%;
+    float: left;
+    padding: 20px 40px;
+}
+
+.job-listing {
+    background: rgba(20, 0, 40, 0.75);
+    border: 1px solid #b000ff;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #b000ff;
+}
+
+.job-listing h2 {
+    color: #b000ff;
+    text-shadow: 0 0 12px #b000ff;
+}
+
+.job-listing h3 {
+    color: #ff00ea;
+    text-shadow: 0 0 8px #ff00ea;
+}
+
+.box {
+    background: rgba(10, 0, 30, 0.6);
+    border-left: 4px solid #ff00ea;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 0 10px #ff00ea;
+}
+
+
+
+aside {
+    width: 25%;           /* RULE */
+    float: right;         /* RULE */
+    padding: 20px;        /* RULE */
+    margin: 20px;         /* RULE */
+
+    background: rgba(20, 0, 40, 0.75);
+    border: 2px solid #ff00ea; /* RULE: coloured border */
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ff00ea;
+}
+
+aside h3 {
+    text-shadow: 0 0 10px #ff00ea;
+}
+
+
+footer {
+    clear: both;
+    width: 100%;    /* RULE */
+    padding: 15px 0;
+    background: rgba(10, 0, 20, 0.8);
+    border-top: 2px solid #b000ff;
+    box-shadow: 0 0 20px #b000ff;
+    margin-top: 40px;
+    text-align: center;  /* RULE */
+}
+
+footer p {
+    font-size: 12px;     /* RULE: small font */
+    opacity: 0.8;
+    color: #e4d9ff;
+}
+
+/* ==================
+   RESPONSIVE
+   ================== */
+
+@media (max-width: 900px) {
+    aside {
+        width: 90%;
+        float: none;
+        margin: 20px auto;
+    }
+
+    main {
+        width: 90%;
+        float: none;
+        margin: auto;
+    }
+}
+
+
+
+nav {
+    background: rgba(10, 0, 25, 0.85);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #a020f0;
+}
+
+.logo {
+    font-size: 1.6rem;
+    color: #d78dff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-list a {
+    color: #e9d5ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    color: #a020f0;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(25, 0, 45, 0.95);
+    padding: 15px;
+    border: 1px solid #a020f0;
+    border-radius: 6px;
+}
+
+.dropdown:hover .dropdown-menu {
     display: block;
-    margin-top: 8px;
-  }
+}
 
-  .about-table {
-    width: 95%;
-  }
+.dropdown-menu li {
+    padding: 5px 0;
+}
 
-  form {
-    width: 90%;
-  }
+.dropdown-menu a:hover {
+    color: #d78dff;
+}
+
+
+
+
+.about-us {
+    padding: 60px 90px;
+    background: rgba(15, 0, 35, 0.75);
+    backdrop-filter: blur(4px);
+    border-left: 2px solid #a020f0;
+    border-right: 2px solid #a020f0;
+    margin: 50px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.about-us h1 {
+    font: small-caps bold 2.6rem "Orbitron", sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #d78dff;
+}
+
+
+
+.about-figure {
+    float: right;      
+    width: 280px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.about-figure img {
+    width: 100%;
+    border: 4px solid #a020f0;  /* REQUIRED shorthand border */
+    border-radius: 10px;
+}
+
+.about-figure figcaption {
+    color: #d6b6ff;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+
+
+
+.student-id {
+    float: right;               /* REQUIRED */
+    color: #b77dff;
+    font-weight: bold;
+    margin-left: 10px;
+    text-shadow: 0 0 6px #a020f0;
+}
+
+
+
+
+.group-members-box,
+.list-box {
+    background: rgba(35, 0, 55, 0.55);
+    padding: 25px;
+    border: 2px solid #a020f0;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.group-members-box h2,
+.list-box h2 {
+    color: #d78dff;
+}
+
+
+
+
+.about-table {
+    width: 60%;
+    margin: 0 auto;             /* REQUIRED center table */
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.about-table caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #e3d7ff;
+}
+
+/* Table headings bold (REQUIRED) */
+.about-table th {
+    font-weight: bold;
+    padding: 12px;
+    background-color: #3b005a;   /* hex color REQUIRED */
+    border: 1px solid #a020f0;
+}
+
+/* Table cells with hex background color */
+.about-table td {
+    background-color: #1a0029;   /* REQUIRED hex value */
+    padding: 12px;
+    border: 1px solid #6a0080;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.about-table td:hover {
+    background-color: #4c007c;
+    cursor: pointer;
+}
+
+
+
+.site-footer {
+    width: 100%;                      /* REQUIRED full width */
+    text-align: center;               /* REQUIRED */
+    font-size: 0.8rem;                /* REQUIRED small text */
+    padding: 20px;
+    margin-top: 50px;
+    background: rgba(12, 0, 25, 0.9);
+    border-top: 2px solid #a020f0;
+    color: #d8caff;
+}
+/* ============================
+   FUTURISTIC PURPLE NEON THEME
+   ============================ */
+
+.theme-futuristic * {
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+/* === BODY === */
+.theme-futuristic {
+    background: #0a0718;
+    color: #e4d7ff;
+    padding: 20px;
+}
+
+/* === NAVIGATION BAR === */
+.theme-futuristic .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1b1036;
+    padding: 15px 30px;
+    border-bottom: 2px solid #7c3bff;
+    box-shadow: 0 0 12px #7c3bff;
+}
+
+.theme-futuristic .logo {
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #d5b3ff;
+    text-shadow: 0 0 12px #9e56ff;
+}
+
+.theme-futuristic .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.theme-futuristic .nav-list a {
+    text-decoration: none;
+    color: #c09cff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.theme-futuristic .nav-list a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px #b76dff;
+}
+
+/* === HEADINGS === */
+.theme-futuristic h1 {
+    text-align: center;
+    margin: 25px 0;
+    color: #d8b5ff;
+    text-shadow: 0 0 8px #823cff;
+}
+
+/* === FORM CONTAINER === */
+.theme-futuristic form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #140b29;
+    border: 2px solid #5e2bba;
+    box-shadow: 0 0 20px #6c3cff;
+    padding: 30px;
+    border-radius: 12px;
+
+    display: grid;
+    gap: 20px;
+}
+
+/* === LABELS === */
+.theme-futuristic label {
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #d1b6ff;
+}
+
+/* === INPUTS === */
+.theme-futuristic input[type="text"],
+.theme-futuristic input[type="email"],
+.theme-futuristic select,
+.theme-futuristic textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    background: #1e123d;
+    border: 1px solid #7334ff;
+    border-radius: 6px;
+    color: #e6d8ff;
+    font-size: 1em;
+    outline: none;
+    transition: 0.3s;
+}
+
+.theme-futuristic input:focus,
+.theme-futuristic select:focus,
+.theme-futuristic textarea:focus {
+    border-color: #b06bff;
+    box-shadow: 0 0 10px #9b4dff;
+}
+
+/* === FIELDSETS === */
+.theme-futuristic fieldset {
+    border: 1px solid #6d2cff;
+    padding: 15px;
+    border-radius: 8px;
+    background: #1a0f33;
+    box-shadow: inset 0 0 10px #5325b5;
+}
+
+.theme-futuristic legend {
+    color: #e0c8ff;
+    text-shadow: 0 0 6px #a36aff;
+    padding: 0 8px;
+}
+
+/* === CHECKBOXES & RADIO === */
+.theme-futuristic input[type="checkbox"],
+.theme-futuristic input[type="radio"] {
+    transform: scale(1.2);
+    accent-color: #a256ff;
+    cursor: pointer;
+}
+
+/* === BUTTON === */
+.theme-futuristic button {
+    padding: 15px;
+    background: #6a24ff;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    box-shadow: 0 0 12px #7f40ff;
+}
+
+.theme-futuristic button:hover {
+    background: #8d4bff;
+    box-shadow: 0 0 18px #b470ff;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 700px) {
+    .theme-futuristic form {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .theme-futuristic .nav-list {
+        gap: 15px;
+    }
 }
