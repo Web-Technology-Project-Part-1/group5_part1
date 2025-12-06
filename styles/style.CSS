@@ -1,6 +1,6 @@
 
 
-/* NEON COLOR VARIABLES */
+/* Neon colours to give  our website an electric effect */
 :root {
   --neon-purple: #b000ff;
   --neon-pink: #ff00ea;
@@ -11,14 +11,14 @@
   --font-main: 'Orbitron', sans-serif;
 }
 
-/* 🌌 GLOBAL THEME WRAPPER */
+/* Font style gives modern feeling */
 .nova-theme {
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
   color: var(--text-light);
 
-  /* Space Background (replace URL when needed) */
+  /*background photo to beautify our homepage */
   background: 
     url("../images/bck_grnd.jpg") 
     no-repeat center center fixed;
@@ -31,7 +31,7 @@
   overflow-x: hidden;
 }
 
-/* ⭐ GLOBAL TEXT GLOW */
+/* GLOWY effect */
 .nova-theme h1,
 .nova-theme h2,
 .nova-theme h3 {
@@ -99,7 +99,7 @@
   display: block;
 }
 
-
+/* CALL TO ACTION BUTTONS */
 .nova-theme .cta-button {
   padding: 8px 20px;
   background: transparent;
@@ -117,7 +117,7 @@
   box-shadow: 0 0 20px var(--neon-purple), 0 0 40px var(--neon-purple);
 }
 
-
+/* HERO SECTION */
 .nova-theme .hero {
   height: 70vh;
   display: flex;
@@ -185,19 +185,16 @@
     display: none;
   }
 }
-
+/* ==================
+   CLASSIC THEME
+   ================== */
+   /*  ITS A BASIC STYLES FOR A CLEAN, PROFESSIONAL 
+   LOOK AND IS COOL TONED AND EDGY WITH A NEON POP */
 body.classic-theme {
     margin: 0;
     padding: 0;
     font-family: 'Orbitron', sans-serif;
 
-   
-    background: url("YOUR-SPACE-IMAGE-LINK-HERE") no-repeat center center fixed;
-    background-size: cover;
-    background-color: rgba(10, 0, 20, 0.85);
-    background-blend-mode: overlay;
-
-    color: #e4d9ff;
 }
 
 
@@ -237,7 +234,7 @@ body.classic-theme {
     text-shadow: 0 0 10px #00d5ff;
 }
 
-
+/* FONT SIZE SIMULATES NICELY WITH THE WEB */
 header h1 {
     font: small-caps 48px 'Orbitron', sans-serif;
     color: #fff;
@@ -258,7 +255,8 @@ main {
     float: left;
     padding: 20px 40px;
 }
-
+/* JOB LISTINGS WITH A NEON BORDER AND DIFFERENT 
+SHADES OF PURPLES USED TO ENSURE VARIETY*/
 .job-listing {
     background: rgba(20, 0, 40, 0.75);
     border: 1px solid #b000ff;
@@ -277,7 +275,8 @@ main {
     color: #ff00ea;
     text-shadow: 0 0 8px #ff00ea;
 }
-
+/* BOX ELEMENTS WITH A SLIGHTLY DIFFERENT BACKGROUND
+TO MAKE THEM STAND OUT */
 .box {
     background: rgba(10, 0, 30, 0.6);
     border-left: 4px solid #ff00ea;
@@ -287,6 +286,7 @@ main {
 }
 
 
+/* SIDEBAR STYLED TO MATCH THE THEME WITH A COLOURED BORDER */
 
 aside {
     width: 25%;           /* RULE */
@@ -295,15 +295,15 @@ aside {
     margin: 20px;         /* RULE */
 
     background: rgba(20, 0, 40, 0.75);
-    border: 2px solid #ff00ea; /* RULE: coloured border */
+    border: 2px solid #ff00ea; /* RULE: neon pink border */
     border-radius: 10px;
     box-shadow: 0 0 15px #ff00ea;
 }
-
+/* SIDEBAR HEADINGS WITH A GLOW EFFECT */
 aside h3 {
     text-shadow: 0 0 10px #ff00ea;
 }
-
+/* FOOTER STYLED TO MATCH THE THEME WITH FULL WIDTH AND CENTERED TEXT */
 
 footer {
     clear: both;
@@ -322,9 +322,7 @@ footer p {
     color: #e4d9ff;
 }
 
-/* ==================
-   RESPONSIVE
-   ================== */
+/* ADAPTIVE STYLES ENSURING RESPONSIVENESS */
 
 @media (max-width: 900px) {
     aside {
@@ -341,7 +339,7 @@ footer p {
 }
 
 
-
+/* THE ABOUT PAGE STYLES */
 nav {
     background: rgba(10, 0, 25, 0.85);
     padding: 15px 40px;
@@ -396,7 +394,7 @@ nav {
     color: #d78dff;
 }
 
-
+/* About Us Section */
 
 
 .about-us {
@@ -440,10 +438,10 @@ nav {
 }
 
 
-
+/* Student ID styled to stand out */
 
 .student-id {
-    float: right;               /* REQUIRED */
+    float: right;               
     color: #b77dff;
     font-weight: bold;
     margin-left: 10px;
@@ -452,7 +450,7 @@ nav {
 
 
 
-
+/* Group Members Box and List Box with consistent styling */
 .group-members-box,
 .list-box {
     background: rgba(35, 0, 55, 0.55);
@@ -466,7 +464,7 @@ nav {
 .list-box h2 {
     color: #d78dff;
 }
-
+/* About Table with specified styles */
 
 
 
@@ -518,9 +516,7 @@ nav {
     border-top: 2px solid #a020f0;
     color: #d8caff;
 }
-/* ============================
-   FUTURISTIC PURPLE NEON THEME
-   ============================ */
+/* ANOTHER SIMILAR AND CONSISTANT THEMED PAGE */
 
 .theme-futuristic * {
     box-sizing: border-box;
@@ -544,27 +540,27 @@ nav {
     border-bottom: 2px solid #7c3bff;
     box-shadow: 0 0 12px #7c3bff;
 }
-
+/* Logo Styling */
 .theme-futuristic .logo {
     font-size: 1.6em;
     font-weight: bold;
     color: #d5b3ff;
     text-shadow: 0 0 12px #9e56ff;
 }
-
+/* Navigation Links */
 .theme-futuristic .nav-list {
     list-style: none;
     display: flex;
     gap: 25px;
 }
-
+/* Navigation Link Styling */
 .theme-futuristic .nav-list a {
     text-decoration: none;
     color: #c09cff;
     font-weight: 500;
     transition: 0.3s;
 }
-
+/* Hover Effect for Navigation Links */
 .theme-futuristic .nav-list a:hover {
     color: #ffffff;
     text-shadow: 0 0 8px #b76dff;
@@ -676,3 +672,8 @@ nav {
         gap: 15px;
     }
 }
+/*THROUGHOUT THE CSS, WE HAVE USED A CONSISTENT COLOR PALETTE
+FEATURING VARIOUS SHADES OF PURPLE AND BLUE TO CREATE A FUTURISTIC
+AND NEON AESTHETIC. THE FONTS, SPACING, AND ELEMENT STYLES ARE DESIGNED
+TO ENSURE READABILITY AND A MODERN LOOK. */
+/* WE HAVE ALSO ENSURED FOLLOWING THE SPECIFIC RULES REQUESTED IN THE INSTRUCTIONS FILE */
