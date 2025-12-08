@@ -193,14 +193,15 @@ our gaming website is has a modern and electric feel with purple and neon tones*
    ================== */
    /*  ITS A BASIC STYLES FOR A CLEAN, PROFESSIONAL 
    LOOK AND IS COOL TONED AND EDGY WITH A NEON POP */
-bbody.classic-theme {
+body.classic-theme {
     margin: 0;
     padding: 0;
     font-family: 'Orbitron', sans-serif;
+
 }
 
-/* NAV BAR */
-.classic-theme .nav-bar {
+
+ .classic-theme .nav-bar {
     width: 100%;
     padding: 15px 0;
     background: rgba(10, 0, 20, 0.7);
@@ -211,55 +212,55 @@ bbody.classic-theme {
     align-items: center;
 }
 
-.classic-theme .logo {
+ .classic-theme.logo {
     font-size: 22px;
-    color: #b000ff;
+    color: #35054b;
     text-shadow: 0 0 10px #b000ff, 0 0 20px #ff00ea;
     margin-left: 20px;
 }
 
-.classic-theme .nav-list {
+.classic-theme.nav-list {
     list-style: none;
     display: flex;
     gap: 25px;
     margin-right: 20px;
 }
 
-.classic-theme .nav-list a {
+.classic-theme.nav-list a {
     text-decoration: none;
     color: #e4d9ff;
     transition: 0.3s;
 }
 
-.classic-theme .nav-list a:hover {
+.classic-theme.nav-list a:hover {
     color: #00d5ff;
     text-shadow: 0 0 10px #00d5ff;
 }
 
-/* HEADERS */
-.classic-theme header h1 {
+/* FONT SIZE SIMULATES NICELY WITH THE WEB */
+.classic-theme h1 {
     font: small-caps 48px 'Orbitron', sans-serif;
-    color: #fff;
+    color: rgb(53, 7, 53);
     text-align: center;
     margin-top: 40px;
     text-shadow: 0 0 15px #b000ff, 0 0 30px #00d5ff;
 }
 
-.classic-theme header p {
+header p {
     text-align: center;
     font-size: 16px;
     opacity: 0.8;
 }
 
-/* MAIN CONTENT */
-.classic-theme main {
+
+main {
     width: 75%;
     float: left;
     padding: 20px 40px;
 }
-
-/* JOB LISTINGS */
-.classic-theme .job-listing {
+/* JOB LISTINGS WITH A NEON BORDER AND DIFFERENT 
+SHADES OF PURPLES USED TO ENSURE VARIETY*/
+.job-listing {
     background: rgba(20, 0, 40, 0.75);
     border: 1px solid #b000ff;
     padding: 20px;
@@ -268,18 +269,18 @@ bbody.classic-theme {
     box-shadow: 0 0 15px #b000ff;
 }
 
-.classic-theme .job-listing h2 {
+.job-listing h2 {
     color: #b000ff;
     text-shadow: 0 0 12px #b000ff;
 }
 
-.classic-theme .job-listing h3 {
+.job-listing h3 {
     color: #ff00ea;
     text-shadow: 0 0 8px #ff00ea;
 }
-
-/* BOX */
-.classic-theme .box {
+/* BOX ELEMENTS WITH A SLIGHTLY DIFFERENT BACKGROUND
+TO MAKE THEM STAND OUT */
+.box {
     background: rgba(10, 0, 30, 0.6);
     border-left: 4px solid #ff00ea;
     padding: 15px;
@@ -287,42 +288,48 @@ bbody.classic-theme {
     box-shadow: 0 0 10px #ff00ea;
 }
 
-/* SIDEBAR */
-.classic-theme aside {
-    width: 25%;
-    float: right;
-    padding: 20px;
-    margin: 20px;
+
+/* SIDEBAR STYLED TO MATCH THE THEME WITH A COLOURED BORDER */
+
+aside {
+    width: 25%;           /* RULE */
+    float: right;         /* RULE */
+    padding: 20px;        /* RULE */
+    margin: 20px;         /* RULE */
+
     background: rgba(20, 0, 40, 0.75);
-    border: 2px solid #ff00ea;
+    border: 2px solid #ff00ea; /* RULE: neon pink border */
     border-radius: 10px;
     box-shadow: 0 0 15px #ff00ea;
 }
-
-.classic-theme aside h3 {
+/* SIDEBAR HEADINGS WITH A GLOW EFFECT */
+aside h3 {
     text-shadow: 0 0 10px #ff00ea;
 }
+/* FOOTER STYLED TO MATCH THE THEME WITH FULL WIDTH AND CENTERED TEXT */
 
-/* FOOTER */
-.classic-theme footer {
+footer {
     clear: both;
-    width: 100%;
+    width: 100%;    /* RULE */
     padding: 15px 0;
     background: rgba(10, 0, 20, 0.8);
     border-top: 2px solid #b000ff;
     box-shadow: 0 0 20px #b000ff;
     margin-top: 40px;
-    text-align: center;
+    text-align: center;  /* RULE */
 }
 
-.classic-theme footer p {
-    font-size: 12px;
+footer p {
+    font-size: 12px;     /* RULE: small font */
     opacity: 0.8;
     color: #e4d9ff;
 }
-/*ADAPTIVE STYLES */
 
+/* ADAPTIVE STYLES ENSURING RESPONSIVENESS */
 
+/* ============================
+   RESPONSIVE
+============================ */
 @media (max-width: 900px) {
     .modern aside,
     .modern main {
