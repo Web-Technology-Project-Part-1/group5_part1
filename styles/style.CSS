@@ -5,48 +5,51 @@ about.html and the jobs.html where as maryam alali did the index.html and shanza
 our gaming website is has a modern and electric feel with purple and neon tones*/
 /* Neon colours to give  our website an electric effect */
 :root {
-  --neon-purple: #b000ff;
-  --neon-pink: #ff00ea;
-  --neon-blue: #00d5ff;
-  --panel-bg: rgba(20, 0, 40, 0.75);
-  --dark-overlay: rgba(10, 0, 20, 0.85);
-  --text-light: #e4d9ff;
+  --neon-purple: #9a7bd6;
+  --neon-pink: #c6a6dd;
+  --neon-blue: #a9c4e8;
+  --panel-bg: rgba(245, 240, 255, 0.75);
+  --dark-overlay: rgba(230, 220, 245, 0.85);
+  --text-light: #3a2f4f;
   --font-main: 'Orbitron', sans-serif;
 }
 
-/* Font style gives modern feeling */
 .nova-theme {
   margin: 0;
   padding: 0;
   font-family: var(--font-main);
   color: var(--text-light);
 
-  /*background photo to beautify our homepage */
-  background: 
-    url("../images/bck_grnd.jpg") 
+  background:
+    url("../images/bck_grnd.jpg")
     no-repeat center center fixed;
   background-size: cover;
 
-  /* Purple dark blend for neon contrast */
   background-color: var(--dark-overlay);
   background-blend-mode: overlay;
 
   overflow-x: hidden;
 }
 
-/* GLOWY effect */
+/* HEADINGS */
 .nova-theme h1,
 .nova-theme h2,
 .nova-theme h3 {
-  text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-blue);
+  text-shadow:
+    0 0 6px var(--neon-purple),
+    0 0 12px var(--neon-blue);
+}
+.nova-theme  h1,
+.nova-theme #about h2 {
+  text-align: center;
 }
 
-
+/* HEADER */
 .nova-theme header {
-  background: rgba(10, 0, 20, 0.7);
+  background: rgba(245, 240, 255, 0.7);
   backdrop-filter: blur(6px);
   border-bottom: 2px solid var(--neon-purple);
-  box-shadow: 0 0 20px var(--neon-purple);
+  box-shadow: 0 0 12px var(--neon-purple);
   padding: 15px 0;
 }
 
@@ -59,13 +62,12 @@ our gaming website is has a modern and electric feel with purple and neon tones*
 }
 
 .nova-theme .logo {
-  color: var(--neon-purple);
+  color: #5a2e8a; /* darker purple */
   font-weight: 700;
-  font-size: 22px;
-  text-shadow: 0 0 15px var(--neon-purple), 0 0 30px var(--neon-pink);
+  font-size: 38px;
 }
 
-
+/* NAV */
 .nova-theme .nav-list {
   list-style: none;
   display: flex;
@@ -80,114 +82,101 @@ our gaming website is has a modern and electric feel with purple and neon tones*
 
 .nova-theme .nav-list a:hover {
   color: var(--neon-blue);
-  text-shadow: 0 0 10px var(--neon-blue);
 }
 
-.nova-theme .dropdown {
-  position: relative;
-}
-
-.nova-theme .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 35px;
-  background: var(--panel-bg);
-  list-style: none;
-  padding: 10px 0;
-  border: 1px solid var(--neon-purple);
-  box-shadow: 0 0 15px var(--neon-purple);
-}
-
-.nova-theme .dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* CALL TO ACTION BUTTONS */
-.nova-theme .cta-button {
-  padding: 8px 20px;
-  background: transparent;
-  border: 1px solid var(--neon-purple);
-  color: var(--neon-purple);
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 4px;
-  text-shadow: 0 0 10px var(--neon-purple);
-}
-
-.nova-theme .cta-button:hover {
-  background: var(--neon-purple);
-  color: #fff;
-  box-shadow: 0 0 20px var(--neon-purple), 0 0 40px var(--neon-purple);
-}
-
-/* HERO SECTION */
+/* HERO */
 .nova-theme .hero {
-  height: 70vh;
+  min-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
 
-  background: radial-gradient(circle at center,
-    rgba(120, 0, 200, 0.35),
-    rgba(10, 0, 20, 0.8)
+  background: radial-gradient(
+    circle at center,
+    rgba(190, 170, 225, 0.45),
+    rgba(230, 220, 245, 0.85)
   );
-
-  color: #fff;
 }
 
+/* MAIN HERO BOX – BIGGER */
+.nova-theme .hero-box {
+  max-width: 1500px;   /* BIGGER */
+  padding: 100px 110px; /* BIGGER */
+  margin: 25px auto 0;
 
-.nova-theme .panel,
-.nova-theme .item,
-.nova-theme .content-box {
   background: var(--panel-bg);
   border: 1px solid var(--neon-purple);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px var(--neon-purple);
+  border-radius: 16px;
+  box-shadow: 0 0 18px var(--neon-purple);
   transition: 0.3s ease;
 }
 
-.nova-theme .panel:hover,
-.nova-theme .item:hover,
-.nova-theme .content-box:hover {
+/* ABOUT SECTION */
+.nova-theme .content {
+  padding: 60px 5%;
+}
+
+/* ABOUT ITEMS – SIDE BY SIDE AT BOTTOM */
+.nova-theme .about-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* INFO BOXES */
+.nova-theme .item,
+.nova-theme .content-box {
+  flex: 1;
+  background: var(--panel-bg);
+  border: 1px solid var(--neon-purple);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px var(--neon-purple);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.nova-theme .item:hover {
   transform: scale(1.04);
-  box-shadow:
-    0 0 20px var(--neon-pink),
-    0 0 40px var(--neon-blue);
 }
 
 /* ICONS */
 .nova-theme .icon {
   font-size: 40px;
   color: var(--neon-pink);
-  text-shadow: 0 0 10px var(--neon-pink);
 }
 
-
+/* FOOTER */
 .nova-theme footer {
   text-align: center;
   padding: 25px;
-  background: rgba(10, 0, 20, 0.7);
-  border-top: 2px solid var(--neon-purple);
-  box-shadow: 0 0 15px var(--neon-purple);
+  background: transparent; /* FIX */
+  border: none;            /* FIX */
+  box-shadow: none;        /* FIX */
+  font-size: 18px; /* <-- increased font size */
 }
 
 .nova-theme footer a {
-  color: var(--neon-blue);
+  color: var(--text-light);
   text-decoration: none;
+  font-size: 18px; /* <-- match link font size */
 }
 
-.nova-theme footer a:hover {
-  color: var(--neon-pink);
-  text-shadow: 0 0 8px var(--neon-pink);
-}
 
+/* MOBILE */
 @media (max-width: 768px) {
   .nova-theme .nav-list {
     display: none;
   }
+
+  .nova-theme .about-items {
+    flex-direction: column;
+  }
 }
+
 /* ==================
    CLASSIC THEME
    ================== */
@@ -199,7 +188,11 @@ body.classic-theme {
     font-family: 'Orbitron', sans-serif;
 
 }
-
+body.classic-theme {
+    background: #000;   /* BLACK BACKGROUND */
+    color: #fff;   
+    padding: 20px;     
+}
 
  .classic-theme .nav-bar {
     width: 100%;
@@ -338,10 +331,16 @@ footer p {
         margin: 20px auto;
     }
 }
+     
 
 /* ============================
    NAVIGATION BAR
 ============================ */
+ .modern{
+ background: #0a0718;
+    color: #e4d7ff;
+    padding: 20px;
+}
 .modern nav {
     background: rgba(10, 0, 25, 0.85);
     padding: 15px 40px;
@@ -352,8 +351,8 @@ footer p {
 }
 
 .modern .logo {
-    font-size: 1.6rem;
-    color: #d78dff;
+    font-size: 3rem;
+    color: #28053a;
     font-weight: bold;
     letter-spacing: 1px;
 }
